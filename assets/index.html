@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+        <title>Practicando Nodejs</title>
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="img/nodejs-logo.png" alt="logo de NodeJs">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn">Presiona</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Hecho POr martin AHERERERA</p>
+            <div class="middle">
+                <a class="btn" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </footer>
+
+
+        <div class="eyes">
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+        </div>
+
+
+        <script>
+            var balls = document.getElementsByClassName("ball");
+            document.onmousemove = function(){
+                var x = event.clientX * 100 / window.innerWidth + "%";
+                var y = event.clientY * 100 / window.innerHeight + "%";
+                //event.clientX => get the horizontal coordinate of the mouse
+                //event.clientY => get the Vertical coordinate of the mouse
+                //window.innerWidth => get the browser width
+                //window.innerHeight => get the browser height
+
+                for(var i=0;i<2;i++){
+                    balls[i].style.left = x;
+                    balls[i].style.top = y;
+                    balls[i].style.transform = "translate(-"+x+",-"+y+")";
+                }
+            }
+        </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
